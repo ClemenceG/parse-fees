@@ -29,7 +29,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Prendre comme example l'onglet \"copie en dur\" du fichier :");
+		System.out.println("Prendre comme example l'onglet \"copie en dur\" du fichier Teams: Product/05-Projects/03-Performance/Portfolio Data/Parsing Templates:");
 		System.out.println("Entrez path/filename du fichier à extraire :");
 		String filename = scanner.nextLine();
 		System.out.println("Le premier onglet etant l'onglet 1, quel est la position de l'onglet à extraire :");
