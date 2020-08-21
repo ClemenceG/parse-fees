@@ -32,6 +32,8 @@ public class Main {
 		System.out.println("Prendre comme example l'onglet \"copie en dur\" du fichier :");
 		System.out.println("Entrez path/filename du fichier à extraire :");
 		String filename = scanner.nextLine();
+		System.out.println("Le premier onglet etant l'onglet 1, quel est la position de l'onglet à extraire :");
+		int sheetNb = scanner.nextInt()-1;
 		
 		System.out.println("Entrez path/filename du fichier de destination :");
 		String exportFilename = scanner.nextLine();
@@ -44,7 +46,7 @@ public class Main {
 		try(FileInputStream is = new FileInputStream(xlsx);
 				XSSFWorkbook wb = new XSSFWorkbook(is);) {
 
-			XSSFSheet sheet = wb.getSheetAt(1);
+			XSSFSheet sheet = wb.getSheetAt(sheetNb);
 			ArrayList<RowBlock> rows = splitTransactionSheet(sheet);
 			rows.remove(0);
 			
